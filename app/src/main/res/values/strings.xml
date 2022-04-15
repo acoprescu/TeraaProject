@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TeraaProject</string>
+    <string name="text_intro">....</string>
 </resources>
