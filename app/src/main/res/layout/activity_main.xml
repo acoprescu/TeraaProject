@@ -28,6 +28,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
 
         android:backgroundTint="@drawable/option_button_selector"
+
+        app:cornerRadius = "16dp"
         />
 
     <Button
