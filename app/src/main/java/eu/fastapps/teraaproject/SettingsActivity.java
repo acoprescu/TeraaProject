@@ -21,7 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
         final SharedPreferences.Editor editor = sharedPreferences.edit();
         final boolean isDarkModeOn = sharedPreferences.getBoolean("isDarkModeOn", false);
 
-        final Switch enabledarkmode = findViewById(R.id.switch_darkmode);
+        final Switch enabledarkmode = findViewById(R.id.enabledarkmode);
         // When user reopens the app
         // after applying dark/light mode
         if (isDarkModeOn) {
@@ -31,6 +31,8 @@ public class SettingsActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             enabledarkmode.setText("Enable Dark Mode");
         }
+
+        enabledarkmode.setChecked(isDarkModeOn);
 
         enabledarkmode.setOnClickListener(view -> {
             // When user taps the enable/disable
@@ -64,7 +66,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.text_customizehelp).setOnClickListener(
+        findViewById(R.id.customise).setOnClickListener(
                 (v) -> {
                     startActivity(new Intent(this, IntroActivity.class));
                 }

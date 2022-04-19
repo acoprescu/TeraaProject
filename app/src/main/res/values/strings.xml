@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">TeraaProject</string>
-    <string name="text_intro">....</string>
+    <string name="app_name">Panic Attack</string>
+
+    <string name="email_account">Email account</string>
+    <string name="name">Name</string>
+    <string name="customise_help">Customise help</string>
+    <string name="password">Password</string>
 </resources>
