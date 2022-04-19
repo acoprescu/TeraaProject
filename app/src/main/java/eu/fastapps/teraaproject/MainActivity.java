@@ -5,18 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class SettingsActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_main);
 
-        findViewById(R.id.text_customizehelp).setOnClickListener(
+
+        findViewById(R.id.button_settings).setOnClickListener(
                 (v) -> {
-                    startActivity(new Intent(this, IntroActivity.class));
+                    Intent intent = new Intent(this, SettingsActivity.class);
+                    startActivity(intent);
                 }
         );
-
     }
 }
