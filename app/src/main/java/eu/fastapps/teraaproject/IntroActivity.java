@@ -102,7 +102,7 @@ public class IntroActivity extends AppCompatActivity {
 
     private void onSaveButton(){
         savePreferences();
-        launchTechnique();
+        finish();
     }
 
     private void savePreferences(){
@@ -157,12 +157,6 @@ public class IntroActivity extends AppCompatActivity {
         boolean natureSoundsValue = preferences.getBoolean
                 ("nature_sounds", false);
         natureSoundsButton.setSelected(natureSoundsValue);
-
-    }
-
-    void launchTechnique(){
-        Intent intent = new Intent(this, TechniqueActivity.class);
-        startActivity(intent);
 
     }
 
