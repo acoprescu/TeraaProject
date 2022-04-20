@@ -15,12 +15,6 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        findViewById(R.id.imageYoutube).setOnClickListener(
-                (v)->{
-                    Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                            Uri.parse("https://www.youtube.com/watch?v=" + YT_PAGE));
-                    startActivity(webIntent);
-                }
-        );
+        
     }
 }
