@@ -72,5 +72,9 @@ public class SettingsActivity extends AppCompatActivity {
                 }
         );
 
+        findViewById(R.id.contactus).setOnClickListener(
+                (v) -> startActivity(new Intent(this, ContactActivity.class))
+        );
+
     }
 }
