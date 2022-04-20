@@ -42,11 +42,22 @@ public class TechniqueActivity extends AppCompatActivity {
         editText5 = findViewById(R.id.editText5);
     }
 
-    /*
-    View.VISIBLE
-    View.INVISIBLE
-    View.GONE
-     */
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        ((TeraaApplication)getApplication()).stopSound();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        int soundId = getIntent().getIntExtra("sound", -1);
+        ((TeraaApplication)getApplication()).playSound(soundId);
+    }
+
 
     private void onNext() {
         editText1.setText("");

@@ -8,28 +8,43 @@ public class TeraaApplication extends Application{
     public void onCreate() {
         super.onCreate();
 
-        //SettingsLoader settingsLoader = AndroidSettingsLoader(this)
-        //settings = Settings(settingsLoader)
-
         loadSounds();
-
-
-
-//        if (mediaPlayers[0] != null) {
-//            mediaPlayers[0].seekTo(0);
-//            mediaPlayers[0].setLooping(true);
-//            mediaPlayers[0].start();
-//        }
 
     }
 
-    MediaPlayer mediaPlayers[];
+    private MediaPlayer mediaPlayers[];
     private void loadSounds() {
         mediaPlayers = new MediaPlayer[2];
 
-        MediaPlayer sound0 = MediaPlayer.create(this, R.raw.nature_sound);
+        MediaPlayer sound0 = MediaPlayer.create(this, R.raw.record_audio);
         //mediaPlayer.setVolume
-        mediaPlayers[0] = sound0;
+        MediaPlayer sound1 = MediaPlayer.create(this, R.raw.nature_sound);
 
+        mediaPlayers[0] = sound0;
+        mediaPlayers[1] = sound1;
     }
+
+
+    /** Plays a sound
+     * @param id
+     * 0: Record audio
+     * 1: Nature Sound
+     *
+     */
+    public void playSound(int id){
+        if(id >= 0 && id <= 1 ){
+            if (mediaPlayers[id] != null) {
+                mediaPlayers[id].seekTo(0);
+                mediaPlayers[id].setLooping(true);
+                mediaPlayers[id].start();
+            }
+        }
+    }
+
+    public void stopSound(){
+        for (MediaPlayer mediaPlayers: mediaPlayers) {
+            mediaPlayers.stop();
+        }
+    }
+
 }
