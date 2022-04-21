@@ -6,19 +6,34 @@ import androidx.appcompat.app.AppCompatDelegate;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class SettingsActivity extends AppCompatActivity {
 
     Button save;
     EditText name, email, password;
     SharedPreferences sp;
-    String nameStr, emailStr, passStr;
+
+    ImageView imageView;
+    boolean hasAvatar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +117,17 @@ public class SettingsActivity extends AppCompatActivity {
         String passStr = sp.getString("password", "");
         password.setText(passStr);
 
+        imageView = findViewById(R.id.imageView);
+        hasAvatar = sp.getBoolean("avatar", false);
+        if(hasAvatar){
+            setImage();
+        }
+
+        imageView.setOnClickListener(
+                (v) -> pickImage()
+        );
+
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,6 +140,7 @@ public class SettingsActivity extends AppCompatActivity {
                 editor.putString("name", nameStr);
                 editor.putString("email", emailStr);
                 editor.putString("password", passStr);
+                editor.putBoolean("avatar", hasAvatar);
                 editor.commit();
                 Toast.makeText(SettingsActivity.this, "Information Saved", Toast.LENGTH_LONG).show();
 
@@ -122,4 +149,74 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
     }
+
+    int PICK_PHOTO_FOR_AVATAR = 1000;
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICK_PHOTO_FOR_AVATAR && resultCode == RESULT_OK) {
+            if (data == null) {
+                Toast.makeText(this, "No image selected", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            try {
+                String avatarPath = getFilesDir() + "/avatar";
+
+                InputStream in  = getContentResolver().openInputStream(data.getData());
+                OutputStream out = new FileOutputStream(avatarPath);
+                if(copyFile(in, out)){
+                    setImage();
+                    hasAvatar = true;
+                }
+
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    public void pickImage() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(intent, PICK_PHOTO_FOR_AVATAR);
+    }
+
+    void setImage(){
+        try {
+            imageView.setImageURI(null);
+            String avatarPath = getFilesDir() + "/avatar";
+            imageView.setImageURI(Uri.parse(avatarPath));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public boolean copyFile(InputStream in, OutputStream out) throws IOException {
+            boolean succes = true;
+            try {
+                // Transfer bytes from in to out
+                byte[] buf = new byte[1024];
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+            }
+            catch(Exception e){
+             succes = false;
+            }
+            finally {
+                out.close();
+            }
+            return succes;
+    }
+
+
 }

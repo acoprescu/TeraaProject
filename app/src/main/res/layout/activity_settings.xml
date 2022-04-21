@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.473"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/panic_support" />
 
     <Button
         android:id="@+id/customise"
