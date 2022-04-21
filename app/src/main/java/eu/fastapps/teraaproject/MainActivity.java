@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.button_help).setOnClickListener(
                 (v) -> {
-                    loadPreferences();
+                    loadPreferences(1);
                     Intent intent = null;
                     switch(defaultValue){
                         case 1:
@@ -82,14 +82,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean hasSavedPreferences(){
-        //TODO
-        return false;
+        loadPreferences(-1);
+
+        return defaultValue != -1;
     }
 
-    private void loadPreferences(){
+    private void loadPreferences(int def){
         SharedPreferences preferences  = getSharedPreferences("Settings", 0);
 
-        defaultValue = preferences.getInt("default", 1);
+        defaultValue = preferences.getInt("default", def);
 
         recordingValue = preferences.getBoolean
                 ("recording", false);
