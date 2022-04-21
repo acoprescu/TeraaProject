@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 public class PairsActivity extends AppCompatActivity {
@@ -17,6 +20,7 @@ public class PairsActivity extends AppCompatActivity {
     boolean[] flipped = new boolean[SIZE];
     ImageView[] imageViews;
     Drawable[] drawables;
+    Drawable backDrawable;
 
     Random rand = new Random();
 
@@ -33,7 +37,16 @@ public class PairsActivity extends AppCompatActivity {
 
     void updateImages(){
         for(int i = 0; i < SIZE; i++){
-            imageViews[i].setImageDrawable(drawables[data[i]]);
+            if(data[i] < 0){
+                imageViews[i].setVisibility(View.INVISIBLE);
+            }
+            else if(flipped[i]){
+                imageViews[i].setImageDrawable(drawables[data[i]]);
+            }
+            else{
+                imageViews[i].setImageDrawable(backDrawable);
+            }
+
         }
     }
 
@@ -72,6 +85,16 @@ public class PairsActivity extends AppCompatActivity {
                 (ImageView) findViewById(R.id.imageView11),
         };
 
+        for(int i = 0; i < SIZE; i++){
+            imageViews[i].setTag(i);
+
+            imageViews[i].setOnClickListener(
+                    (v) -> onImageCLicked(v.getTag())
+            );
+        }
+
+
+
         drawables = new Drawable[]{
                 getResources().getDrawable( R.drawable.pairimg0, null),
                 getResources().getDrawable( R.drawable.pairimg1, null),
@@ -80,8 +103,41 @@ public class PairsActivity extends AppCompatActivity {
                 getResources().getDrawable( R.drawable.pairimg4, null),
                 getResources().getDrawable( R.drawable.pairimg5, null),
         } ;
+
+        backDrawable = getResources().getDrawable( R.drawable.panic_support, null);
     }
 
+
+    void onImageCLicked(Object tag){
+        int crt = (Integer)tag;
+
+        int flippedCount = getFLippedCount();
+        switch (flippedCount){
+            case 0:
+                flipped[crt] = true;
+                break;
+            case 1:
+                if(flipped[crt]){
+                    flipped[crt] = false;
+                }
+                else{
+                    int old = getFLipped().get(0);
+                    if(data[crt] == data[old]){
+                        data[crt] = -1;
+                        data[old] = -1;
+                    }
+                    else{
+                        flipped[crt] = true;
+                    }
+                }
+                break;
+            case 2:
+
+                break;
+        }
+
+        updateImages();
+    }
 
 
     @Override
@@ -99,4 +155,36 @@ public class PairsActivity extends AppCompatActivity {
         int soundId = getIntent().getIntExtra("sound", -1);
         ((TeraaApplication)getApplication()).playSound(soundId);
     }
+
+    int getFLippedCount(){
+        int flippedCount = 0;
+        for(int i = 0; i < SIZE; i++){
+            if(data[i] < 0){
+                continue;
+            }
+
+            if(flipped[i]){
+                flippedCount++;
+            }
+        }
+
+        return flippedCount;
+    }
+
+    List<Integer> getFLipped(){
+        List<Integer> result = new LinkedList<>();
+        for(int i = 0; i < SIZE; i ++){
+            if(data[i] < 0){
+                continue;
+            }
+
+            if(flipped[i]){
+                result.add(i);
+            }
+        }
+
+        return result;
+
+    }
+
 }
