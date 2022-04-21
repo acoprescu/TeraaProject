@@ -26,7 +26,7 @@ public class TechniqueActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_technique);
 
-        title = findViewById(R.id.content);
+        title = findViewById(R.id.title);
 
         setTechniqueTitle();
 
@@ -104,7 +104,7 @@ public class TechniqueActivity extends AppCompatActivity {
                 break;
             case 4:
                 title.setText("Name one thing that you can taste");
-                break;
+                nextButton.setOnClickListener((v)->finish());
         }
     }
 }

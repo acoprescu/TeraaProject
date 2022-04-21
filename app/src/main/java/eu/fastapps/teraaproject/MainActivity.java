@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case 2:
-                            //exercise TODO
-                            //intent = new Intent(this, .class);
+                            intent = new Intent(this, ExerciceActivity.class);
                             break;
 
                         default:

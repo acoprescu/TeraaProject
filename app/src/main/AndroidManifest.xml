@@ -37,6 +37,9 @@
             android:name=".TechniqueActivity"
             android:exported="false" />
         <activity
+            android:name=".ExerciceActivity"
+            android:exported="false" />
+        <activity
             android:name=".IntroActivity"
             android:exported="false" />
     </application>
