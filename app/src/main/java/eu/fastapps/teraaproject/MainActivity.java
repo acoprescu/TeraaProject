@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,12 +41,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_help).setOnClickListener(
                 (v) -> {
                     loadPreferences();
-                    Intent intent;
+                    Intent intent = null;
                     switch(defaultValue){
-
                         case 1:
                             intent = new Intent(this, TechniqueActivity.class);
-                            startActivity(intent);
                             break;
 
                         case 2:
@@ -57,6 +56,21 @@ public class MainActivity extends AppCompatActivity {
                             //game TODO
                             //intent = new Intent(this, .class);
                             break;
+                    }
+
+                    if (intent != null) {
+                        if(recordingValue){
+                            intent.putExtra("sound", 0);
+                        }
+                        else if(natureSoundsValue)
+                        {
+                            intent.putExtra("sound", 1);
+                        }
+                        startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(this, "Option not implemented yet",
+                                Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -75,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadPreferences(){
         SharedPreferences preferences  = getSharedPreferences("Settings", 0);
 
-        defaultValue = preferences.getInt("default", 0);
+        defaultValue = preferences.getInt("default", 1);
 
         recordingValue = preferences.getBoolean
                 ("recording", false);

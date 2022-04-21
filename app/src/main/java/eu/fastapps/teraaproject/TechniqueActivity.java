@@ -26,7 +26,7 @@ public class TechniqueActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_technique);
 
-        title = findViewById(R.id.title);
+        title = findViewById(R.id.content);
 
         setTechniqueTitle();
 

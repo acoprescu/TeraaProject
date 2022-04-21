@@ -19,6 +19,12 @@
     <style name="MyButton" parent="Widget.AppCompat.Button">
         <item name="android:textAllCaps">false</item>
     </style>
+    <style name="Theme.TeraaProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.TeraaProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TeraaProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

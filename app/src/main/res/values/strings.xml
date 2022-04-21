@@ -5,4 +5,6 @@
     <string name="name">Name</string>
     <string name="customise_help">Customise help</string>
     <string name="password">Password</string>
+    <string name="title_activity_info_details">Details</string>
+
 </resources>

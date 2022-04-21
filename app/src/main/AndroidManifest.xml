@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeraaProject">
         <activity
+            android:name=".InfoDetailsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_info_details"
+            android:theme="@style/Theme.TeraaProject.NoActionBar" />
+        <activity
             android:name=".ContactActivity"
             android:exported="false" />
         <activity
