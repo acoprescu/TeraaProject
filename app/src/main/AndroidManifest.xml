@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeraaProject">
         <activity
+            android:name=".PairsActivity"
+            android:exported="false" />
+        <activity
             android:name=".InfoDetailsActivity"
             android:exported="false"
             android:label="@string/title_activity_info_details"
