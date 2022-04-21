@@ -132,7 +132,11 @@ public class PairsActivity extends AppCompatActivity {
                 }
                 break;
             case 2:
+                for(int i = 0; i < SIZE; i++){
+                    flipped[i] = false;
+                }
 
+                flipped[crt] = true;
                 break;
         }
 
