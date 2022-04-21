@@ -2,13 +2,15 @@
 <resources>
     <string-array name="info_options">
         <item>Breathing Technique 4-6</item>
-        <item>The “Stop” Technique</item>
-        <item>Journal Technique</item>
+        <item>5-4-3-2-1 Technique</item>
+        <item>The "Stop" Technique</item>
+        <item>The Journal Technique</item>
         <item>How do you know that you are having a panic attack?</item>
-        <item>Tehnica 5-4-3-2-1</item>
         <item>Explain why you need to repeat it everyday?</item>
         <item>What is your trigger?</item>
         <item>If you keep having problems call a specialist</item>
+        <item>Useful sounds</item>
+        <item>Useful links</item>
         <item>Bibliografie</item>
 
     </string-array>

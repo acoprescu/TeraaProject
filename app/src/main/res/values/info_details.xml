@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="info_details">
-        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet diam eget neque ultricies maximus id vel leo. Pellentesque vehicula leo urna, non vehicula tellus ornare a. Donec fringilla convallis diam fringilla consectetur. Cras molestie, eros ut ultricies faucibus, magna dui tincidunt tellus, ut ultricies lorem augue ornare lorem. Vivamus non sem at diam semper maximus a ut ex. Vivamus imperdiet purus nec pellentesque eleifend. Nam purus dui, sollicitudin cursus lacinia ac, interdum id orci. Ut varius quam sit amet augue laoreet rhoncus. Donec risus ipsum, faucibus non faucibus eget, congue a mi. Sed at arcu nec dui porta suscipit. Praesent nec velit ut nibh suscipit blandit. In congue gravida risus vel pulvinar. Aliquam erat volutpat. In semper augue eget pulvinar tristique. Phasellus in auctor elit, eu viverra metus. Duis vel porttitor felis, in hendrerit velit.</item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet diam eget neque ultricies maximus id vel leo. Pellentesque vehicula leo urna, non vehicula tellus ornare a. Donec fringilla convallis diam fringilla consectetur. Cras molestie, eros ut ultricies faucibus, magna dui tincidunt tellus, ut ultricies lorem augue ornare lorem. Vivamus non sem at diam semper maximus a ut ex. Vivamus imperdiet purus nec pellentesque eleifend. Nam purus dui, sollicitudin cursus lacinia ac, interdum id orci. Ut varius quam sit amet augue laoreet rhoncus. Donec risus ipsum, faucibus non faucibus eget, congue a mi. Sed at arcu nec dui porta suscipit. Praesent nec velit ut nibh suscipit blandit. In congue gravida risus vel pulvinar. Aliquam erat volutpat. In semper augue eget pulvinar tristique. Phasellus in auctor elit, eu viverra metus. Duis vel porttitor felis, in hendrerit velit.</item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet diam eget neque ultricies maximus id vel leo. Pellentesque vehicula leo urna, non vehicula tellus ornare a. Donec fringilla convallis diam fringilla consectetur. Cras molestie, eros ut ultricies faucibus, magna dui tincidunt tellus, ut ultricies lorem augue ornare lorem. Vivamus non sem at diam semper maximus a ut ex. Vivamus imperdiet purus nec pellentesque eleifend. Nam purus dui, sollicitudin cursus lacinia ac, interdum id orci. Ut varius quam sit amet augue laoreet rhoncus. Donec risus ipsum, faucibus non faucibus eget, congue a mi. Sed at arcu nec dui porta suscipit. Praesent nec velit ut nibh suscipit blandit. In congue gravida risus vel pulvinar. Aliquam erat volutpat. In semper augue eget pulvinar tristique. Phasellus in auctor elit, eu viverra metus. Duis vel porttitor felis, in hendrerit velit.</item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet diam eget neque ultricies maximus id vel leo. Pellentesque vehicula leo urna, non vehicula tellus ornare a. Donec fringilla convallis diam fringilla consectetur. Cras molestie, eros ut ultricies faucibus, magna dui tincidunt tellus, ut ultricies lorem augue ornare lorem. Vivamus non sem at diam semper maximus a ut ex. Vivamus imperdiet purus nec pellentesque eleifend. Nam purus dui, sollicitudin cursus lacinia ac, interdum id orci. Ut varius quam sit amet augue laoreet rhoncus. Donec risus ipsum, faucibus non faucibus eget, congue a mi. Sed at arcu nec dui porta suscipit. Praesent nec velit ut nibh suscipit blandit. In congue gravida risus vel pulvinar. Aliquam erat volutpat. In semper augue eget pulvinar tristique. Phasellus in auctor elit, eu viverra metus. Duis vel porttitor felis, in hendrerit velit.</item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet diam eget neque ultricies maximus id vel leo. Pellentesque vehicula leo urna, non vehicula tellus ornare a. Donec fringilla convallis diam fringilla consectetur. Cras molestie, eros ut ultricies faucibus, magna dui tincidunt tellus, ut ultricies lorem augue ornare lorem. Vivamus non sem at diam semper maximus a ut ex. Vivamus imperdiet purus nec pellentesque eleifend. Nam purus dui, sollicitudin cursus lacinia ac, interdum id orci. Ut varius quam sit amet augue laoreet rhoncus. Donec risus ipsum, faucibus non faucibus eget, congue a mi. Sed at arcu nec dui porta suscipit. Praesent nec velit ut nibh suscipit blandit. In congue gravida risus vel pulvinar. Aliquam erat volutpat. In semper augue eget pulvinar tristique. Phasellus in auctor elit, eu viverra metus. Duis vel porttitor felis, in hendrerit velit.</item>
-        <item>Explain why you need to repeat it everyday?</item>
-        <item>What is your trigger?</item>
-        <item>If you keep having problems call a specialist</item>
-        <item>Bibliografie</item>
+        <item>"This is a basic technique but with effective results. You must inhale for 4 seconds, hold it for 2-3 seconds and then exhale in 6 seconds. You have to make sure that you exhale longer than you inhale. At the beginning it might seem hard to exhale in 6 seconds but if you take full breaths and breath with your diaphragm, it is possible to do so. In the first few tries you might not exhale during the full 6 seconds but as long as you breath consciously the breathing exercise should help to calm you down."</item>
+        <item>"During a panic attack our mind stays focused on dark thoughts and the feeling of fear, we can no longer correctly perceive what is around us and where we are. Panic overwhelms us. In this kind of situation the best way to achieve a calmer state of mind is to remind yourself of your surroundings, of the physical world.
+This is where technique 5-4-3-2-1 comes into play, as it trains all the 5 senses (sight, touch, hearing, smell and taste) helping you to stay connected with the environment, reminding you of the spaces around you, and it gives the mind something else to think about other than fear.
+            How does it work?
+5 Name 5 things that you can see
+4 Name 4 things that you can touch(actually touch them and concentrate on the different textures)
+3 Name 3 things that you can here
+2 Name 2 things that you can smell
+1 Name 1 things that you can taste(if you can't find anything to taste, think about the last thing you have eaten)
+When naming the objects you can either say them out loud or in your head.
+"</item>
+
+        <item>"It is a simple four-step mental checklist that helps calm down your brain. It can be done very quick so when you don’t have much time on your hands this is the perfect solution.
+Let me present it to you:
+            S=Stop
+Stop what you are doing: Press the pause button on your thought and actions
+T=Take
+Take a few deep breaths to center yourself and bring yourself fully into the present moment
+            O=Observe
+Observe what is going on with you:
+Body
+What physical sensations are you aware of (touch, sight, hearing, taste, smell)?
+Just a quick check it helps to get your mind of your thoughts on the inside and focus on the outside.
+ Emotions
+What are you feeling right now?
+Just an overview, are you sad, anxious, scared?
+P=Process
+Process everything you just felt and/or are still feeling, your body and your emotions. It’s ok to just stay somewhere and process everything.
+https://www.themuse.com/advice/the-mental-trick-you-can-use-to-get-through-any-stressful-situation
+
+"</item>
+
+        <item>"s"</item>
+        <item>"Before starting to present some of the signs and symptoms of panic attacks you have to understand that every person experiences them differenty. So you don't have to check them like you check off you shopping list. You might experience some of them, you might experience others but the main point is that during a panic attack your brain activates the fight or flight mode so you might be scared (of impending doom, of losing cotrol, and so on) but you have to remind yourself that you are safe and it's all happening inside your brain. These reactions happen most of the times because they are triggered by something. To find out more about triggers you should read our "What is your trigger?" paragraph.
+
+There are more detail there. Now onto physical symptoms: you might experience
+• sweating,
+•trembling or shaking, •accelerated heart rate, •shortness of breath or •thightness in your throat, •chills,
+•hot flashes,
+•nausea
+•abdominal cramping
+•chest pain
+•headaches
+•dizziness, lightheadedness or faintness
+• numbness or tingling sensations
+•feelings of unreality or detachment
+
+One of the worst things about panic attacks is the intense fear that you'll have another one. You may fear having panic attacks so much that you avoid certain situations where they may occur.
+"</item>
+        <item>"d"</item>
+        <item>"d"</item>
+        <item>"d"</item>
+        <item>"d"</item>
+        <item>"d"</item>
+        <item>"d"</item>
 
     </string-array>
 
