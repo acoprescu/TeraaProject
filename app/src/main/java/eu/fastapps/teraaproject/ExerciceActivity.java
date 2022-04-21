@@ -23,4 +23,20 @@ public class ExerciceActivity extends AppCompatActivity {
         GIF = findViewById(R.id.gif);
         nextbutton.setOnClickListener((v)->finish());
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        ((TeraaApplication)getApplication()).stopSound();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        int soundId = getIntent().getIntExtra("sound", -1);
+        ((TeraaApplication)getApplication()).playSound(soundId);
+    }
 }

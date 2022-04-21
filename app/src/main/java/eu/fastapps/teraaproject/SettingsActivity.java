@@ -144,6 +144,7 @@ public class SettingsActivity extends AppCompatActivity {
                 editor.commit();
                 Toast.makeText(SettingsActivity.this, "Information Saved", Toast.LENGTH_LONG).show();
 
+                finish();
 
             }
         });
