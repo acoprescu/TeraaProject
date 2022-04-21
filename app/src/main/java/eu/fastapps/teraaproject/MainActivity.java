@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         default:
-                            //game TODO
-                            //intent = new Intent(this, .class);
+                            intent = new Intent(this,  PairsActivity.class);
                             break;
                     }
 
