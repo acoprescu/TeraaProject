@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b9b9ff">
+    >
 
     <TextView
         android:id="@+id/ex_title"
@@ -37,8 +37,9 @@
         android:layout_height="54dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#B24FF8"
+        android:backgroundTint="@color/buttoncolor"
         android:text="next"
+        android:textColor="@color/white"
         app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

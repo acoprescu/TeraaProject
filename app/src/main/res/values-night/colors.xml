@@ -9,6 +9,6 @@
     //for Night Mode
     <color name="backgroundColor">#410D80</color>
     <color name="textColor">#FFFFFF</color>
-
+    <color name="buttoncolor">#9296F0</color>
     <color name="helpButtonColor">#3700B3</color>
 </resources>

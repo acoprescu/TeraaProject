@@ -12,6 +12,6 @@
     <color name="backgroundColor">#BB86FC</color>
     <color name="textColor">#040404</color>
 
-    <color name="helpButtonColor">#FF0000</color>
-
+    <color name="helpButtonColor">#ff88a4</color>
+    <color name="buttoncolor">#A842FB</color>	
 </resources>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b9b9ff"
     tools:context=".TechniqueActivity">
 
 
@@ -15,7 +14,7 @@
         android:layout_marginTop="132dp"
         android:text="Name 5 things ..."
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -94,7 +93,7 @@
         android:layout_height="54dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="40dp"
-        android:backgroundTint="#B24FF8"
+        android:backgroundTint="@color/buttoncolor"
         android:text="Next"
         app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
