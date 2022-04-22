@@ -169,13 +169,23 @@ https://youtu.be/_nMAJI8-Lzk
 https://youtu.be/gnVdXN_iZsQ
 https://youtu.be/_clCzEnTvAE
 "</item>
-        <item>"Here you can find the websites from where we took our information from.
+        <item>
+            "<![CDATA[
+            Here you can find the websites from where we took our information from.
+            <br/>
+            <a href=
+            "https://alexandrucretu.wordpress.com/2020/12/08/tehnici-de-relaxare-metoda-5-4-3-2-1/">
+                Tehnici de Relaxare – Metoda 5-4-3-2-1
+            </a>
+            <br/>
 
-            https://alexandrucretu.wordpress.com/2020/12/08/tehnici-de-relaxare-metoda-5-4-3-2-1/
-
+            <a href="https://www.mayoclinic.org/diseases-conditions/panic-attacks/symptoms-causes/syc-20376021">
             https://www.mayoclinic.org/diseases-conditions/panic-attacks/symptoms-causes/syc-20376021
-"</item>
+            </a>
+            ]]>"
+        </item>
 
     </string-array>
+
 
 </resources>
