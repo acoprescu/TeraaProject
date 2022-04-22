@@ -37,7 +37,7 @@
 
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      android:src="@drawable/panic_support" />
+      android:src="@drawable/logo" />
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/button_help"

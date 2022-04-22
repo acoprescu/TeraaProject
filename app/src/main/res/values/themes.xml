@@ -16,6 +16,9 @@
         <!-- Customize your theme here. -->
 
         <item name="buttonStyle">@style/MyButton</item>
+
+        <item name="android:windowBackground">@color/backgroundColor</item>
+
     </style>
 
     <style name="MyButton" parent="Widget.AppCompat.Button">
