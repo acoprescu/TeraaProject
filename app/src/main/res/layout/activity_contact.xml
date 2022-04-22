@@ -47,7 +47,7 @@
         android:id="@+id/textView"
         android:layout_width="392dp"
         android:layout_height="95dp"
-        android:text="Sending to: alexia.florete@gmail.com, anastasiatgab@gmail.com, theodora.oprescu@gmail.com, ruxandraflorescu12@gmail.com, primaadresa89@gmail.com"
+        android:text="Sending to: teraa.team2000@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

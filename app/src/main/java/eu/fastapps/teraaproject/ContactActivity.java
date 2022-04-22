@@ -18,11 +18,7 @@ public class ContactActivity extends AppCompatActivity {
             String sub = ((EditText) findViewById(R.id.txtSubject)).getText().toString();
             String mess = ((EditText) findViewById(R.id.txtMessage)).getText().toString();
             Intent mail = new Intent(Intent.ACTION_SEND);
-            mail.putExtra(Intent.EXTRA_CC, new String[]{"alexia.florete@gmail.com"});
-            mail.putExtra(Intent.EXTRA_CC, new String[]{"anastasiatgab@gmail.com"});
-            mail.putExtra(Intent.EXTRA_CC, new String[]{"theodora.oprescu@gmail.com"});
-            mail.putExtra(Intent.EXTRA_CC, new String[]{"ruxandraflorescu12@gmail.com"});
-            mail.putExtra(Intent.EXTRA_CC, new String[]{"primaadresa89@gmail.com"});
+            mail.putExtra(Intent.EXTRA_CC, new String[]{"teraa.team2000@gmail.com"});
             mail.putExtra(Intent.EXTRA_SUBJECT, sub);
             mail.putExtra(Intent.EXTRA_TEXT, mess);
             mail.setType("message/rfc822");
