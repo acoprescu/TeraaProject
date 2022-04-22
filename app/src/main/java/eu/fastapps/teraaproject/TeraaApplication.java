@@ -2,6 +2,9 @@ package eu.fastapps.teraaproject;
 
 import android.app.Application;
 import android.media.MediaPlayer;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 public class TeraaApplication extends Application{
     @Override
@@ -33,17 +36,22 @@ public class TeraaApplication extends Application{
      */
     public void playSound(int id){
         if(id >= 0 && id <= 1 ){
-            if (mediaPlayers[id] != null) {
-                mediaPlayers[id].seekTo(0);
-                mediaPlayers[id].setLooping(true);
-                mediaPlayers[id].start();
+            MediaPlayer mediaPlayer = mediaPlayers[id];
+
+            if (mediaPlayer != null) {
+                mediaPlayer.seekTo(0);
+                mediaPlayer.setLooping(true);
+                mediaPlayer.start();
+
             }
         }
     }
 
     public void stopSound(){
-        for (MediaPlayer mediaPlayers: mediaPlayers) {
-            mediaPlayers.stop();
+        for (MediaPlayer mediaPlayer: mediaPlayers) {
+            if(mediaPlayer.isPlaying()){
+                mediaPlayer.pause();
+            }
         }
     }
 
