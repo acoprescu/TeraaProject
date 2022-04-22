@@ -5,13 +5,14 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
     <EditText
         android:id="@+id/txtSubject"
-        android:layout_width="342dp"
-        android:layout_height="86dp"
+        android:layout_width="337dp"
+        android:layout_height="55dp"
         android:layout_marginTop="24dp"
         android:gravity="top"
         android:hint="Subject"
@@ -21,8 +22,8 @@
 
     <EditText
         android:id="@+id/txtMessage"
-        android:layout_width="333dp"
-        android:layout_height="332dp"
+        android:layout_width="331dp"
+        android:layout_height="270dp"
         android:layout_marginTop="28dp"
         android:gravity="top"
         android:hint="Message"
@@ -31,27 +32,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSubject" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="301dp"
+        android:layout_height="30dp"
+        android:text="Sending to: teraa.team2000@gmail.com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/buttoncolor"
-        android:text="Send"
+        android:backgroundTint="@color/buttoncolor"
+        android:text="SEND"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMessage"
-        app:layout_constraintVertical_bias="0.828" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="392dp"
-        android:layout_height="95dp"
-        android:text="Sending to: teraa.team2000@gmail.com"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957"
+        app:cornerRadius="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
