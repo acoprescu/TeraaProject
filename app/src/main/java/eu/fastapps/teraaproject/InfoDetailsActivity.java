@@ -2,6 +2,7 @@ package eu.fastapps.teraaproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -17,8 +18,6 @@ public class InfoDetailsActivity extends AppCompatActivity {
         int position = getIntent().getIntExtra("position", -1);
 
         String[] options = getResources().getStringArray(R.array.info_options);
-        ((TextView)findViewById(R.id.title)).setText(options[position]);
-
         String[] details = getResources().getStringArray(R.array.info_details);
 
         WebView webView = findViewById(R.id.content);
@@ -27,8 +26,12 @@ public class InfoDetailsActivity extends AppCompatActivity {
         webView.getSettings().setAllowContentAccess(true);
         webView.setWebViewClient(new Callback());
 
-        String data = "<!DOCTYPE> <html><body> $$$ <body><html>"
-                .replace("$$$",details[position]);
+        webView.setBackgroundColor(
+                getResources().getColor(R.color.backgroundColor, null));
+
+        String data = "<!DOCTYPE> <html><body> <h2>$$$1</h2> $$$2 <body><html>"
+                .replace("$$$1",options[position])
+                .replace("$$$2",details[position]);
         //System.out.println("!!! " + data);
         webView.loadDataWithBaseURL(null, data , "text/html", "utf-8", null);
 
