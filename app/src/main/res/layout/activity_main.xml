@@ -39,11 +39,14 @@
       app:layout_constraintStart_toStartOf="parent"
       android:src="@drawable/panic_support" />
 
-  <Button
+  <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/button_help"
       android:layout_width="171dp"
       android:layout_height="160dp"
       android:text="Help"
+
+      android:background="@drawable/help_button_selector"
+
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"

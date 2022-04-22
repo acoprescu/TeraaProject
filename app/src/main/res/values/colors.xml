@@ -11,4 +11,6 @@
     //for Light Mode
     <color name="backgroundColor">#BB86FC</color>
     <color name="textColor">#040404</color>
+
+    <color name="helpButtonColor">#FF2020</color>
 </resources>
