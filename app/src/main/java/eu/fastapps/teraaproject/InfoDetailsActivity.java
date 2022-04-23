@@ -34,6 +34,13 @@ public class InfoDetailsActivity extends AppCompatActivity {
                 .replace("$$$2",details[position]);
         //System.out.println("!!! " + data);
         webView.loadDataWithBaseURL(null, data , "text/html", "utf-8", null);
+        webView.setWebViewClient(new WebViewClient() {
+            public void onPageFinished(WebView view, String url) {
+                webView.loadUrl(
+                        "javascript:document.body.style.setProperty(\"color\", \"white\");"
+                );
+            }
+        });
 
     }
 
