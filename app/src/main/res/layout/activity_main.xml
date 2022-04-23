@@ -33,12 +33,12 @@
 
   <ImageView
       android:id="@+id/imageView"
-      android:layout_width="150dp"
-      android:layout_height="270dp"
+      android:layout_width="128dp"
+      android:layout_height="118dp"
 
 
-      android:layout_marginStart="4dp"
-      android:layout_marginBottom="4dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginBottom="16dp"
       android:scaleType="centerCrop"
       android:src="@drawable/logo"
       app:layout_constraintBottom_toBottomOf="parent"
