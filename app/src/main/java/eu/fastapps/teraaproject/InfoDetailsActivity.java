@@ -29,18 +29,18 @@ public class InfoDetailsActivity extends AppCompatActivity {
         webView.setBackgroundColor(
                 getResources().getColor(R.color.backgroundColor, null));
 
-        String data = "<!DOCTYPE> <html><body> <h2>$$$1</h2> $$$2 <body><html>"
+        String data = "<!DOCTYPE> <html><body> <h2 style=\"color:white\">$$$1</h2> $$$2 <body><html>"
                 .replace("$$$1",options[position])
                 .replace("$$$2",details[position]);
         //System.out.println("!!! " + data);
         webView.loadDataWithBaseURL(null, data , "text/html", "utf-8", null);
-        webView.setWebViewClient(new WebViewClient() {
-            public void onPageFinished(WebView view, String url) {
-                webView.loadUrl(
-                        "javascript:document.body.style.setProperty(\"color\", \"white\");"
-                );
-            }
-        });
+//        webView.setWebViewClient(new WebViewClient() {
+//            public void onPageFinished(WebView view, String url) {
+//                webView.loadUrl(
+//                        "javascript:document.body.style.setProperty(\"color\", \"white\");"
+//                );
+//            }
+//        });
 
     }
 
