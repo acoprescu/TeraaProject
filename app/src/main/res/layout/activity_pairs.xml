@@ -14,6 +14,7 @@
         android:layout_height="1dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         >
         <ImageView
             android:id="@+id/imageView0"
@@ -42,6 +43,7 @@
         android:layout_height="1dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         >
         <ImageView
             android:id="@+id/imageView3"
@@ -70,6 +72,7 @@
         android:layout_height="1dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         >
         <ImageView
             android:id="@+id/imageView6"
@@ -98,6 +101,7 @@
         android:layout_height="1dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         >
         <ImageView
             android:id="@+id/imageView9"
